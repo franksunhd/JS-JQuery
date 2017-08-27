@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>function函数声明</title>
+    <script type="text/javascript">
+      //函数也是对象
+      var f1 = new Function("alert(zhansan);");
+
+      //声明式
+      function f2(){
+        alert("lisi");
+      };
+
+      //赋值式
+      var f3 = function(){
+        alert("wangwu");
+      };
+      //调用f3();
+      f3();
+
+      //uname类似与局部变量
+      function sayHello(uname){
+        alert("早上好: " + uname);
+      };
+      //形式参数,实际参数,一般要求形式参数和实际参数的数目一致,而且要对应
+      sayHello("lisi");
+
+      function sayBack(){
+        return("666666");
+        //后面的代码不会被执行
+        alert("999999");
+      }
+      var test=sayBack();
+        alert(test);
+
+    </script>
+  </head>
+  <body>
+    <h1>函数声明</h1>
+  </body>
+</html>

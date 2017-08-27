@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <style media="screen">
+     * {
+       margin: 0;
+       padding: 0;
+      }
+      body {
+        font-size: 16px;
+        background: #999;
+      }
+
+      .one {
+        width: 100px;
+        height: 100px;
+        font-size: 20px;
+        color: pink;
+        margin: 10px; auto;
+        line-height: 100px;
+        background: red;
+      }
+
+      .one:hover {
+        width: 100px;
+        height: 100px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>javascript的事件机制</h1>
+      <br>
+      <br>
+      <hr>
+      <h2>单击　双击事件</h2>
+      <br>
+      <br>
+      <input  type="button" name="" value="测试鼠标单击事件" onclick="test();">
+      <input type="button" name="" value="测试鼠标双击事件" ondblclick="tests();">
+      <hr>
+      <h2>鼠标事件</h2>
+      <div class="one" onmouseout="console.log('欢迎下次再来!');" onmouseover="console.log('欢迎光临!');" >
+        <p>控制台输出</p>
+      </div>
+      <br>
+      <hr>
+      <h2>键盘事件</h2>
+      <!-- 键盘按下和弹起事件 -->
+      <input type="text" name="" value="onkeyup" onkeyup="alert('按下并弹起的时候触发');">
+      <input type="text" name="" value="onkeydown" onkeydown="alert('支持所有的按键');">
+      <input type="text" name="" value="onkeypress" onkeypress="alert('不支持特殊按键');">
+
+
+      <!--
+      value  和　placeholder 的区别
+      1.placeholder是一个占位符，value为空的时候才会显示出来，但是他本身并不是value，也不会被表单提交
+      2.一般不会把两者替换使用，placeholder使用时可以不清除，相当于文本框的文本背景，不设置清空不会清空
+        缺点：当清除之后需要还原的时候就需要　独立添加
+      3.颜色样式，value的颜色为黑色(默认)，placeholder的为浅灰色(默认)
+      4.判断的时候value直接和默认值this.defaultValue比较，而placeholder是直接置为空("")
+     -->
+     <br><br>
+     <hr>
+     <h2>placeholder和value的区别</h2>
+      <input type="text" name="" placeholder="placeholder">
+      <input type="text" name="" value="value">
+
+      <br>
+      <hr>
+      <h2>表单事件</h2>
+      <input type="text" value="focus" onfocus="alert('我获得了焦点');">
+      <input type="text" value="blur" onblur="alert('我失去了焦点');">
+      <input type="text" value="change" onchange="alert('我被改变了');">
+      <select name="address" onchange="alert('城市变为了 '+ value);">
+        <option value="北京">北京</option>
+        <option value="上海">上海</option>
+        <option value="广州">广州</option>
+      </select>
+
+  </body>
+  <script type="text/javascript">
+    var oldValue;
+    var newValue;
+    $("input:text").focus(function(){
+      //placeholder表示
+      $(this).attr("placeholder","");
+      // value表示
+      oldValue = $(this).val();
+      if(oldValue == this.defaultValue){
+        $(this).val("");
+        }
+    });
+
+    $("input:text").blur(function(){
+      // placeholder表示，需独立添加，不能赋值
+      $(this).attr("placeholder","");
+      // value表示不需要独立添加，直接赋值给变量
+      oldValue = $(this).val();
+      if(!oldValue){
+        $(this).val(this.defaultValue);
+      }
+    });
+
+    $("input:text").blur(function(){
+      $(this).attr("placeholder","placeholder");
+    });
+
+    function test() {
+      alert("您单击了鼠标!");
+    }
+    function tests(){
+      alert("您双击了鼠标!");
+    }
+
+  </script>
+</html>

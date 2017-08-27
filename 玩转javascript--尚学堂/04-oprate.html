@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript的运算符</title>
+    <script>
+    /************************算数运算符****************************/
+    var a = 6;
+    var b = 2;
+    console.log("a+b=",a+b);
+    console.log("a-b=",a-b);
+    console.log("a*b=",a*b);
+    console.log("a/b=",a/b);
+    console.log("a%b=",a%b);
+    var c;
+    c=a+b;
+    console.log("c=a+b=",c);
+
+    /************************自增自减运算符****************************/
+    var cc=1;
+    cc++;
+    cc--;
+    console.log("cc++,cc--",cc);
+
+    /************************关系运算符****************************/
+    //关系运算符  (非等值关系运算符  和  等值关系运算符)
+    //比较关系
+    var aaa = 3000;
+    var bbb = 2000;
+    console.log("aaa>bbb",aaa>bbb);    //true
+    console.log("aaa>=bbb",aaa>=bbb);  //true
+    console.log("aaa<bbb",aaa<bbb);    //false
+    console.log("aaa<=bbb",aaa<=bbb);  //false
+    console.log("aaa!=bbb",aaa!=bbb);  //true
+
+    //等值关系   ==(等值符,先转换为相同类型再进行比较大小) 和  ===(等同符,先比较类型,类型相同再比较值)
+    var aa = 1;
+    var bb = true;
+    var cc = "1";
+    var dd = '1';
+    var ee = "true";
+
+    console.log("aa===bb",aa===bb);      //false
+    console.log("aa==bb",aa==bb);        //true
+
+    console.log("aa===cc",aa===cc);      //false
+    console.log("aa==cc",aa==cc);        //true
+
+    console.log("cc==dd",cc==dd);        //true
+    console.log("cc===dd",cc===dd);      //true
+
+    //NAN自己不等于自己,NAN与任意的字符进行数学运算结果还是NAN
+	  //基本数据类型同时向number靠拢,调用Number全局函数
+	  function testNumber(){
+      var aaaa = "true";
+      var bbbb = true;
+      // alert(Number(aaaa));  //NaN
+      alert(Number(bbbb));     // 1
+    }
+
+    //js的内存分析
+    //[]==[]   ???
+    //{}=={}   ???
+
+    console.log("[] == []",[] == []);  //false
+    console.log("{} == {}",{} == {});  //false
+
+    /************************逻辑运算符****************************/
+    // 逻辑运算符  && || !
+    var lisi = 160;
+    var zhansan = 170;
+    var wangwu = 180;
+    var zhaoliu =190;
+
+    //逻辑与运算  必须全部符合才为true
+    console.log("zhaoliu>lisi && zhaoliu>wangwu",zhaoliu>lisi && zhaoliu>wangwu);
+
+    //逻辑或运算  有一个成立就为true
+    console.log("zhaoliu>lisi || lisi>zhansan",zhaoliu>lisi || lisi>zhansan);
+
+    //逻辑非运算  对结果取反
+    console.log("!(zhaoliu>lisi)",!zhaoliu>lisi);
+
+    //与运算  包括 短路与(&&) 和 逻辑与(&)
+    //或运算  包括 短裤或(||) 和 逻辑或(|)
+
+
+
+
+    </script>
+  </head>
+  <body>
+  <h1>JavaScript的运算符</h1>
+  <input type="button" name="" value="测试数据" onclick="testNumber();">
+  </body>
+</html>
