@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>size、addClass、removeClass、find</title>
+    <style media="screen">
+      .c1 {
+        color: red;
+      }
+      .c2 {
+        font-size: 30px;
+        color: green;
+      }
+
+      .c3 {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div>111</div>
+    <div>222</div>
+    <div>333</div>
+    <div>444</div>
+    <div>555</div>
+
+    <div id="c1">
+      <span>aaa</span>
+    </div>
+
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+      // .size()方法从jQuery 1.8开始被废弃。使用.length属性代替。
+      alert($("div").length);
+
+      $("div").addClass("c2 c3");
+      $("div").removeClass("c3");
+      
+      $("#c1").find("span").css("color","orange");
+
+    });
+    </script>
+  </body>
+</html>

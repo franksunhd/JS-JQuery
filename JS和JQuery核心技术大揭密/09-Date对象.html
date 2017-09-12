@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Date 对象</title>
+  </head>
+  <body>
+    <input id="btn" type="button" name="" value="测试事件">
+    <script type="text/javascript">
+      onload = function(){
+        document.getElementById("btn").onclick = function(){
+          var mDate = new Date();
+          // 输出本机当前的 时间
+          console.log(mDate);
+          // 输出当前 年代
+          console.log(mDate.getFullYear() + "年");
+          // 输出当前 月份
+          console.log(mDate.getMonth()+1 + "月");
+          // 输出当前 日期
+          console.log(mDate.getDate() + "日");
+          // 输出当期 小时
+          console.log(mDate.getHours() + "时");
+          // 输出当前 分钟
+          console.log(mDate.getMinutes() + "分");
+          // 输出当前 秒
+          console.log(mDate.getSeconds() + "秒");
+        }
+      }
+    </script>
+  </body>
+</html>

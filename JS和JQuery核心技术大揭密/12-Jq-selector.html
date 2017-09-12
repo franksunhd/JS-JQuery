@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery选择器</title>
+  </head>
+  <body>
+    <div>
+      aaa <br>
+      <a href="#">bbb</a>
+    </div>
+    <div>ccc</div>
+
+    <a href="www.baidu.com">www.baidu.com</a> <br>
+    <a href="www.mi.com">www.mi.com</a><br>
+    <a href="http:aaa.pdf">http:aaa.pdf</a><br>
+    <a href="http:bbb.doc" title="bbb">http:bbb.doc</a><br>
+    <a href="ccc.doc">ccc.doc</a><br>
+    <a href="pdf.ddd">ddd.pdf</a><br>
+
+    <input type="button" name="username" value="你好"><br><br>
+    <input type="button" name="passwd" value="你好" disabled="disabled"><br><br>
+    <input type="text" value="你好" disabled="disabled"><br><br>
+
+
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+      // has()选择包含的元素
+      $("div:has(a)").css("color","red");
+      // a[title] 选择含有title属性的a标签
+      $("a[title]").css("font-size","30px")
+      // 选择a标签属性中href以www开头的元素
+      $("a[href^=www]").css("color","orange");
+      // 选择a标签属性中href以doc结尾的元素
+      $("a[href$=doc]").css("text-decoration","none");
+      // 选择a标签属性中,href匹配的元素
+      $("a[href='pdf.ddd']").css("background","gray");
+      // 选择a标签属性href中包含pdf的元素
+      $("a[href*=pdf]").css("font-size","50px");
+      // attr 设置不可用
+      $("input[name=username]").attr("disabled","disabled");
+      // 获取所有禁用元素
+      $("input[disabled=disabled]").css("width","300px");
+      // 获取所有禁用元素
+      $(":disabled").css("height","50px");
+      // 获取所有的可用元素
+      $(":enable").css("color","red");
+      // 获取所有的文本框
+      $(":text").css("font-size","20px");
+      // 获取所有的控件元素
+      $(":file").css("width","200px");
+      // 获取所有的被选中元素
+      $(":selected").css("height","200px");
+      // 获取所有的可见元素
+      $(":visible").css("color","red");
+      // 获取所有的表单元素
+      $(":submit").css("width","200px");
+    });
+    </script>
+  </body>
+</html>

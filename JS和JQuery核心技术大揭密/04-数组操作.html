@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="btn" type="button" name="" value="测试按钮" onclick="test();">
+
+    <script type="text/javascript">
+    // onload 页面加载完毕之后
+    onload = function(){
+
+
+      //HTML DOM document对象
+      //getElementById 返回对拥有指定 id 的第一个对象的引用。
+      document.getElementById("btn").onclick = function(){
+        
+        var a1 = new Array();
+        var a2 = new Array(2);
+        var a3 = new Array("shangsan","lisi","wangwu");
+
+        console.log(a1+"|"+a2+"|"+a3);
+        var aa1 = [];
+        var aa2 = ["张珊","李四","王五"];
+        console.log(aa1 + "||" + aa2);
+
+        //新建一个数组并初始化
+        var aArray = new Array();
+        var aArray1 = new Array(4);
+        var aTeam = ["aaa","bbb","ccc","ddd"];
+        //下标为0 的位置存入 数值1
+        aArray[0] = "aaa";
+        aArray[1] = "bbb";
+        aArray[2] = "ccc";
+        aArray[3] = "ddd";
+        // 输出aArray数组的长度
+        console.log("aArray.length : " + aArray.length);
+        // 输出下标为2的内容
+        console.log("aTeam[2] : " + aTeam[2]);
+
+        // 将数组转换为字符串
+        console.log("aTeam.toString() : " + aTeam.toString());
+
+        // 将字符串按照指定的间隔格式输出 join()
+        console.log("aTeam.join('-').toString() :"+ aTeam.join("-").toString());
+
+        // 将数组中的内容逆序输出
+        console.log("aTeam.reverse().join('-').toString() : " + aTeam.reverse().join('-').toString());
+
+        // 将字符串转换为数组
+        var sString = "aaa-bbb-ccc";  //object类型
+
+        // 使用split()方法 将字符串中指定间隔的内容分离开
+        var aTeam1 = sString.split("-");
+
+        // 输出分离后的内容
+        console.log("sString.split('-') :" + aTeam1);
+
+        // 输出下标为1 的内容
+        console.log("aTeam1[1] :" + aTeam1[1]);
+
+        // 输出aTeam1的类型
+        console.log("typeof aTeam1 :" + typeof aTeam1);
+      }
+
+    }
+    </script>
+  </body>
+</html>

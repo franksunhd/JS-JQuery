@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>parent、children、next、prev</title>
+  </head>
+  <body>
+
+    <div>aaa</div> <br>
+    <div>
+      <div>bbb</div> <br>
+      <div>bbb</div> <br>
+      <div id="d1">
+        ccc <br>
+        <div>eee</div> <br>
+        <div>eee</div> <br>
+        <div>eee</div> <br>
+      </div>
+      <div>ddd</div> <br>
+      <div>ddd</div> <br>
+    </div>
+
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("#d1").parents().css("color","red");
+      $("#d1").parent().css("font-size","30px");
+
+      $("#d1").children().css("background","gray");
+
+      $("#d1").prev().css("text-decoration","underline");
+      $("#d1").prevAll().css("background","green");
+
+      $("#d1").next().css("text-decoration","underline");
+      $("#d1").nextAll().css("background","blue");
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>定时器</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+    <style media="screen">
+      .container  div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid gray;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 20px;
+      }
+    </style>
+    <script type="text/javascript">
+    function tests(){
+      var i = 0 , j =0 , k=0;
+      var timer = setInterval(function(){
+        i++;
+        document.getElementById("d1").innerText = i;
+        if (i == 5) {
+
+          //当执行到 i==5 时，清除定时器
+          clearInterval(timer);
+        }
+      },1000);
+
+      // setInterval 不断执行
+      setInterval(function(){
+        j++;
+        // 将值 附给 对应的 ID
+        document.getElementById("d2").innerText = j;
+      },1000);
+
+      // setTimeout 执行一次就停止
+      setTimeout(function() {
+        k++;
+        document.getElementById("d3").innerText = k;
+        // 间隔时间为1000ms 即1s
+      },1000);
+
+    }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+    <input class="btn btn-info btn-lg" type="button" name="" value="按钮" onclick="tests()">
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    </div>
+  </body>
+</html>

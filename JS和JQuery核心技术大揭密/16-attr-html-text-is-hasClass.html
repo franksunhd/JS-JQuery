@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>size、addClass、removeClass、find</title>
+    <style media="screen">
+      #d1{
+        font-size: 50px;
+        color: red;
+      }
+      #d1:hover{
+        cursor: pointer;
+      }
+
+      .c2 {
+        background: gray;
+      }
+      .c3 {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="c1" id="d1" title="你好"><span>Hello</span></div>
+
+    <script src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+      $("#d1").click(function(){
+        alert("翻译");
+        // attr 获取
+        document.write($("#d1").attr("title"));
+      });
+        // attr 设置
+      $("#d1").attr("title","aaa");
+      $("#d1").attr({"class":"c2","class":"c3"});
+
+      // html 获取匹配元素的全部内容 包括标签
+      alert($("#d1").html());
+
+      // text 获取匹配元素下的全部内容 不包括标签
+      alert($("#d1").text());
+
+      // hasClass boolean 类型 判断是否含有某种样式
+      alert($("#d1").hasClass("c3"));
+
+      // is 判断 所寻找的是否是所需的
+      alert($("#d1").find("span").is("span"));
+    });
+    </script>
+  </body>
+</html>

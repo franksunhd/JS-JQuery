@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="button" name="" value="测试按钮" onclick="test();">
+
+    <script type="text/javascript">
+      function test(){
+        var iNum1 = 10;          //整形
+        var sString = "10abc";    //字符串类型
+        var aNum = [1,2,3,4,5];    //数组类型
+        var oObject = {name:"aaa",age:13};    //对象类型
+        var fNumber = 10.23;   //浮点型
+        var bBoolean = true;          //布尔类型
+
+        var iNum2 = 10, sString = 'datastring',bflage= false;  //定义多个类型
+
+        console.log("Boolean(iNum1)= "+ Boolean(iNum1));
+
+        //
+        console.log("parseInt(sString)= "+ parseInt(sString));
+        console.log("");
+
+
+        console.log("parseInt('13')= "+ parseInt("13"));			//返回 13
+        console.log("parseInt('15',10)= "+ parseInt("15",10));		//返回 19 (10+9)
+        console.log("parseInt('11',2)= " + parseInt("11",2));		//返回 3 (2+1)
+        console.log("parseInt('17',8)= " + parseInt("17",8));		//返回 15 (8+7)
+        console.log("parseInt('1f',16)= " + parseInt("1f",16));		//返回 31 (16+15)
+        console.log("parseInt('010')= "+ parseInt("010"));		  //未定：返回 10
+
+        var a=123;
+        var b=true;
+        var c;
+        var d=null;
+        console.log(a.toString());    //123
+        console.log(b.toString());    //true
+        // console.log(c.toString());    //会报错   toString无法转换 未定义类型 和 null类型
+        // console.log(d.toString());    //会报错
+
+        console.log(String(a));        //123
+        console.log(String(b));        //true
+        console.log(String(c));        //undefined
+        console.log(String(d));        //null
+
+        var test1= new Boolean(true);
+        var test2= new Boolean(false);
+        var test3= new Date();
+        var test4= new String("999");
+        var test5= new String("999 888");
+
+        document.write(Number(test1)+ "<br />");    //1
+        document.write(Number(test2)+ "<br />");    //0
+        document.write(String(test3)+ "<br />");    //Sun Sep 03 2017 20:53:22 GMT+0800 (CST)
+        document.write(Number(test3)+ "<br />");    //1504443202548
+        document.write(Number(test4)+ "<br />");    //999
+        document.write(Number(test5)+ "<br />");    //NAN
+        
+        document.write(Date("1504358995868")+ "<br />");
+      }
+    </script>
+  </body>
+</html>

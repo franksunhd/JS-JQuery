@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.w {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style: none;
+  float: left;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.igbg {
+  position: relative;
+  height: 500px;
+}
+
+.igs {
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.ig {
+  height: 500px;
+  position: absolute;
+}
+
+img {
+  width: 1226px;
+  height: 500px;
+}
+
+.btn {
+  width: 50px;
+  height: 90px;
+  position: absolute;
+  top: 205px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border-radius: 2px;
+  line-height: 90px;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.btn1 {
+
+}
+
+.btn2 {
+  left: 1176px;
+}
+
+.igbg .tabs {
+  height: 30px;
+  position: absolute;
+  top: 470px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.igbg .tabs .tab {
+  width: 6px;
+  height: 6px;
+  background: #B7B7B7;
+  float: left;
+  text-align: center;
+  line-height: 6px;
+  margin-left: 10px;
+  border: 2px solid #999;
+  border-radius: 100%;
+}
+
+.igbg .tabs .bg {
+  background: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************/
