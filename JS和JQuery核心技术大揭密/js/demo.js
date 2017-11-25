@@ -4,13 +4,13 @@ function test(){
   alert("我是一个按钮");
 };
 
-//onload 是指页面加载完毕之后
-onload = function(){
-  document.getElementById("btn").onclick = function(){
-    alert("我是外部按钮!");
-  }
-  
-}
+// //onload 是指页面加载完毕之后
+// onload = function(){
+//   // document.getElementById("btn").onclick = function(){
+//   //   alert("我是外部按钮!");
+//   // }
+//
+// }
 
 
 
